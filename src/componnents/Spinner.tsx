@@ -1,4 +1,3 @@
-//import '../scss/componnents/spinner.scss'
 
 const Spinner = () => {
     return <>

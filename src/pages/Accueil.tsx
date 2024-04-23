@@ -1,4 +1,3 @@
-//import '../scss/componnents/accueil.scss'
 import { LogementInterface } from '../assets/interfaces'
 import { Await, Link, useLoaderData } from 'react-router-dom'
 import { Suspense } from 'react'

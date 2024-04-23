@@ -1,5 +1,5 @@
-//import '../scss/componnents/card.scss'
 import {LogementInterface} from '../assets/interfaces.tsx'
+
 interface Props {
     data:LogementInterface
 }

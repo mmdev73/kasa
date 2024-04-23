@@ -1,4 +1,3 @@
-//import '../scss/componnents/logement.scss'
 
 const Logement = () => {
     return <>

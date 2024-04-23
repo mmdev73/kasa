@@ -1,4 +1,3 @@
-//import '../scss/componnents/cta.scss'
 
 const Cta = () => {
     return <>

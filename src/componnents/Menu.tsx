@@ -1,5 +1,6 @@
-//import '../scss/componnents/menu.scss'
+
 import {NavLink} from 'react-router-dom'
+
 const Menu = () => {
     return <>
          <header className="header">

@@ -1,4 +1,3 @@
-//import '../scss/componnents/error-page.scss'
 import { Link } from 'react-router-dom'
 interface ErrorPageProp{
     error?: unknown | string | any
