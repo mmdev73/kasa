@@ -1,0 +1,57 @@
+.slideshow{
+    width: 100%;
+    height: 25.9375rem;
+    border-radius: 1.5625rem;
+    margin-bottom: 1.375rem;
+    position: relative;
+    &__img{
+        width: 100%;
+        height: inherit;
+        object-fit: cover;
+        border-radius: 1.5625rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: 1000ms;
+        &.active{
+            opacity: 1;
+            transition: 1000ms;
+        }
+    }
+    &__navigation{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 1;
+        transition: 350ms;
+        &__prev,&__next{
+            position: absolute;
+            top: calc(50% - 40px);
+            cursor: pointer;
+        }
+        &__prev{
+            left: 2%;
+        }
+        &__next{
+            right: 2%;
+        }
+        &__number{
+            position: absolute;
+            bottom: 2%;
+            left: calc(50% - 0.9375rem);
+            color: white;
+            font-weight: 700;
+            font-size: 1.2rem;
+            @media screen and (width < 1024px) {
+                display: none;
+            }
+        }
+        &.deactivated{
+            opacity: 0;
+            transition: 350ms;
+        }
+    }
+}

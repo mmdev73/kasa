@@ -1,0 +1,88 @@
+.logement{
+    width: 100%;
+    margin-bottom: 1.375rem;
+    &__details{
+        width: 100%;
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+        @media screen and (width < 768px) {
+            flex-flow: column;
+        }
+        &__apt{
+            &__title{
+                font-size: 2.25rem;
+                font-weight: 500;
+                color: $main-color;
+            }
+            &__location{
+                font-size: 1.125rem;
+                font-weight: 500;
+            }
+            &__tags{
+                display: flex;
+                flex-flow: row;
+                align-items: center;
+                justify-content: flex-start;
+                gap: 0.625rem;
+                margin-top: 1.375rem;
+                &__item{
+                    background-color: $main-color;
+                    font-size: 0.875rem;
+                    font-weight: 700;
+                    text-align: center;
+                    color: white;
+                    border-radius: 0.625rem;
+                    padding: 0 0.625rem;
+                }
+            }
+        }
+        &__host{
+            display: flex;
+            flex-flow: column;
+            @media screen and (width < 768px) {
+                flex-flow: row-reverse;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 22px;
+            }
+            &__portrait{
+                display: flex;
+                flex-flow: row;
+                margin-bottom: 1.375rem;
+                &__name{
+                    display: flex;
+                    flex-flow: column;
+                    align-items: flex-end;
+                    justify-content: center;
+                    margin-right: 0.625rem;
+                    color: $main-color;
+                    @media screen and (width < 768px) {
+                        align-items: flex-end;
+                    }
+                }
+                &__thumbnail{
+                    height: 4rem;
+                    width: 4rem;
+                    border-radius: 100%;
+                    object-fit: cover;
+                }
+            }
+            &__rating{
+                width: inherit;
+                display: flex;
+                flex-flow: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+    }
+    &__dropdowns{
+        display:flex;
+        flex-flow: row;
+        justify-content: space-between;
+        @media screen and (width < 768px) {
+            flex-flow: column;
+        }
+    }
+}
