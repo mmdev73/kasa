@@ -1,0 +1,26 @@
+@keyframes spinnerRotate{
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+.spinner{
+    width: 100%;
+    min-height: 20rem;
+    max-height: 25rem;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    &__icon{
+        height: 100px;
+        width: 100px;
+        animation:2s infinite spinnerRotate;
+    }
+    &__text{
+        font-size: 1.5rem;
+    }
+}

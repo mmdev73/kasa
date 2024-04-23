@@ -1,0 +1,31 @@
+.card{
+    height: inherit;
+    width: inherit;
+    border-radius: 0.625rem;
+    margin: 0;
+    margin-bottom: 1rem;
+    position: relative;
+    cursor: pointer;
+    &__img{
+        height: inherit;
+        width: inherit;
+        object-fit: cover;
+        border-radius: 0.625rem;
+    }
+    &__figcaption{
+        //width: calc(100% - 1.2rem);
+        width: calc(100% - 1.25rem);
+        min-height: 3.125rem;
+        padding: 0.5rem 0.625rem;
+        border-radius: 0 0 0.625rem 0.625rem;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        font-size: 1.125rem;
+        font-weight: 700;
+        color: white;
+        background-color: rgba(0,0,0,0.4);
+        display: flex;
+        align-items: center;
+    }
+}

@@ -1,0 +1,49 @@
+.header{
+    width: 100%;
+    margin-bottom: 1.375rem;
+    display:flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;    
+    &__img{
+        object-fit: cover;
+        @media screen and (width < 500px) {
+            width: 20%;
+        }
+    }
+    &__menu{
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        font-size: 1.2rem;
+        &__item{
+            font-weight: 500;
+            margin: 0;
+            font-size: 1.5rem;
+            cursor: pointer;
+            text-decoration: none;
+            &.active{
+                text-decoration: underline;
+            }
+            &:hover{
+                text-decoration: underline;
+            }
+            &:active{
+                text-decoration: underline;
+                color: black;
+            }
+            &:visited{
+                text-decoration: none;
+                color: black;
+            }
+            @media screen and (width < 500px) {
+                font-size: 1.2rem;
+            }
+        }
+    }
+}

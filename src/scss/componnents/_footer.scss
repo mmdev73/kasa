@@ -1,0 +1,14 @@
+.footer{
+    width: 100%;
+    height: 13.0625rem;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background-color: black;
+    color: white;
+    &__copyright{
+        font-size: 1.5rem;
+    }
+}
