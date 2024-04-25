@@ -7,7 +7,13 @@ import ErrorPage from './pages/ErrorPage'
 import Accueil from './pages/Accueil'
 import Apropos from './pages/Apropos'
 import Logement from './pages/Logement'
+import { cLog } from './assets/functions'
 
+/*
+* Layout() arrow function
+*
+* @return JSX/TSX Layout componnent
+*/
 const Layout = () =>{
   return <>
     <main className="main">
@@ -20,6 +26,11 @@ const Layout = () =>{
   </>
 }
 
+/*
+* Error() arrow function
+*
+* @return JSX/TSX Error componnent
+*/
 const Error = () =>{
   const error = useRouteError()
   return <>
@@ -33,6 +44,24 @@ const Error = () =>{
   </>
 }
 
+/*
+* getData() arrow function
+* @param <any> link to datas
+* @param <number|null> if nedded the id of selected habitation - default : null
+* @return js object containing mocked datas
+*/
+const getDataMocked = (mock:any,id:string|null = null) => {
+  cLog('mocked data used',4)
+  if(id === null){
+    cLog('no id provided',4)
+    const datas:LogementInterface[] = mock
+    return datas
+  }
+  cLog(`id provided : ${id}`,4)
+  const datas:LogementInterface[] = mock.filter( (logement:LogementInterface) => logement.id === id)
+  return datas
+}
+
 const router = createBrowserRouter([
   {
     path:'',
@@ -42,7 +71,7 @@ const router = createBrowserRouter([
       {
         path:'',
         loader: () => {
-          const datas:LogementInterface[] = mocked_datas
+          const datas:LogementInterface[] = getDataMocked(mocked_datas)
           return defer({datas})
         },
         element:<Accueil />
@@ -57,7 +86,7 @@ const router = createBrowserRouter([
           {
             path:'logements/:id',
             loader: ({params}) => {
-              const datas:LogementInterface[] = mocked_datas.filter( (logement:LogementInterface) => logement.id === params.id)            
+              const datas:LogementInterface[] = getDataMocked(mocked_datas,params.id)          
               return defer({datas})
             },
             element: <Logement />,
