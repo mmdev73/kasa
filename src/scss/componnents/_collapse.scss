@@ -1,3 +1,31 @@
+@keyframes slideout {
+    0% {
+      height: 0;
+    }
+
+    50%{
+        height: 50%;
+    }
+  
+    100% {
+      height: fit-content;
+    }
+}
+
+@keyframes slidein {
+    0% {
+      height: fit-content;
+    }
+
+    50%{
+        height: 50%;
+    }
+  
+    100% {
+      height: 0;
+    }
+}
+
 .collapse{
     width: 100%;
     display: flex;
@@ -35,17 +63,18 @@
         }
     }
     &__content{
-        height: 0;
         display: none;
         width: calc(100% - 2rem);
         padding: 1rem;
         background-color: #f8f8f8;
         border-radius: 0 0 0.3125rem 0.3125rem;
-        transition: 350ms;
+        transition: 1000ms;
+        animation: slidein 800ms;
         &.open{
                 height: auto;
                 display: block;
-                transition: 350ms;
+                transition: 800ms;
+                animation: slideout 1000ms;
         }        
         &__text{
             &__list{

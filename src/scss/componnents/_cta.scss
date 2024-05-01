@@ -1,15 +1,16 @@
 .cta{
     width: 100%;
+    height: 13.9375rem;
     margin-bottom: 1.375rem;
     border-radius: 1.5625rem;
     margin-top: 1rem;
     position: relative;
-    &__img{
-        width: 100%;
-        height: 13.9375rem;
-        object-fit: cover;
-        border-radius: 1.5625rem;
-    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-image: url('/cta-img.webp');
+    background-position: center;
     &__img--filter{
         width: 100%;
         height: 13.9375rem;
@@ -20,9 +21,8 @@
         background-color: rgba(0,0,0,0.4);
     }
     &__title{
-        position: absolute;
-        top: calc(50% - 1.8125rem);
-        left: calc(50% - 22.875rem);
+        z-index:1;
+        text-align: center;
         color: white;
         font-size: 3rem;
         @media screen and (width < 1024px) {

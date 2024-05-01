@@ -27,11 +27,14 @@
             font-size: 1.5rem;
             cursor: pointer;
             text-decoration: none;
+            color: black;
             &.active{
                 text-decoration: underline;
+                color: black;
             }
             &:hover{
                 text-decoration: underline;
+                color: black;
             }
             &:active{
                 text-decoration: underline;

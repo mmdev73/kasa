@@ -6,7 +6,9 @@ import Card from '../componnents/Card'
 import Spinner from '../componnents/Spinner'
 
 const Accueil = () => {
-    const  { datas } = useLoaderData() as { datas:LogementInterface[]}
+    //const  { datas } = useLoaderData() as { datas:LogementInterface[]}
+    const  {datas} = useLoaderData() as { datas:LogementInterface[]}
+    console.log(datas)
     return <>
         <Cta />
         <div className="cardbox">
@@ -16,15 +18,17 @@ const Accueil = () => {
                 errorElement={
                     <div>Could not load datas</div>
                 }
-                children={(datasObjResolved) => (
-                    datasObjResolved.map( (data:LogementInterface) => {
+                children={(datasObjResolved) => {
+                    console.log(datasObjResolved)
+                    return (datasObjResolved.map( (data:LogementInterface) => {
                         return (
                         <Link to={'/logements/' + data.id} className="cardbox__link" key={data.id}>
-                        <Card data={data} key={data.id}/>
+                            <Card data={data} key={data.id}/>
                         </Link>
                     )}
                     )
-                )}
+                    )}
+                }
              />                
             </Suspense>
         </div>
